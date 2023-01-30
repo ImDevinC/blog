@@ -1,0 +1,4 @@
+baseURL = 'https://blog.imdevinc.com/'
+languageCode = 'en-us'
+title = 'ImDevinC'
+theme = 'terminal'
