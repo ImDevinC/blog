@@ -11,16 +11,17 @@ resource "cloudflare_pages_project" "main" {
 
   build_config {
     build_caching   = false
-    build_command   = "exit 0"
-    destination_dir = "static"
+    build_command   = "hugo --minify"
+    destination_dir = "public"
   }
 
   source {
     type = "github"
     config {
-      owner             = "ImDevinC"
-      production_branch = "main"
-      repo_name         = "blog"
+      pr_comments_enabled = false
+      owner               = "ImDevinC"
+      production_branch   = "main"
+      repo_name           = "blog"
     }
   }
 }
