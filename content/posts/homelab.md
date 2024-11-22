@@ -11,6 +11,7 @@ showFullContent = false
 readingTime = true
 hideComments = false
 color = "" #color from the theme settings
+type = "post"
 +++
 > Note, this will be a very high level overview of how I got my cluster and services running. If you would like more detail of how I did this, please let me know and I can break these down in a separate post in the future
 # Introduction

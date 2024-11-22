@@ -1,4 +1,32 @@
-baseURL = 'https://blog.imdevinc.com/'
-languageCode = 'en-us'
-title = 'ImDevinC'
-theme = 'terminal'
+baseURL = "https://blog.imdevinc.com/"
+defaultContentLanguage = "en-us"
+languageCode = "en-us"
+enableRobotsTXT = true
+title = "ImDevinC"
+theme = "gokarna-hugo"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    name = "OpenComp"
+    url = "opencomp"
+    weight = 3
+[params]
+  footer = "ImDevinC"
+  avatarURL = "https://gravatar.com/avatar/ca7cd135c4d4c60645ec0033ee1562a6?size=256"
+  avatarAltText = "ImDevinC"
+  showBackToTopButton = true
+  customHeadHTML = '<link rel="stylesheet" type="text/css" href="style.css">'
+  socialIcons = [
+    {name = "bluesky", url = "https://bsky.app/profile/imdevinc.com"},
+    {name = "github", url = "https://github.com/imdevinc"},
+    {name = "linkedin", url = "https://linkedin.com/in/imdevinc"},
+  ]
+  showPostsOnHomePage = "recent"

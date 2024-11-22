@@ -1,6 +1,10 @@
 ---
 title: OpenComp
-layout: single
+type: post
+pubdate: 2023-03-28
+modified: 2024-10-24T00:00Z
+author: ImDevinC
+tags: [opencomp]
 ---
 I’m a huge supporter of sharing compensation values amongst peers (or people who are looking to become peers). Hiding your compensation doesn’t benefit anyone other than a company trying to low-ball you, and sharing your compensation with others helps make sure that we’re all working from the same information and getting paid what we’re worth. Below you can find my titles and and compensation at the time (to the best of my memory).
 

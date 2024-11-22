@@ -11,6 +11,7 @@ showFullContent = false
 readingTime = true
 hideComments = false
 color = "" #color from the theme settings
+type = "post"
 +++
 # The Issue
 While browsing [/r/terraform](https://reddit.com/r/terraform) the other day, I stumbled upon a post from someon asking how to use Terraform to [manage AWS multi-account deployments at scale](https://www.reddit.com/r/Terraform/comments/17iz4ph/aws_multiaccount_deployments_at_scale/). The actual question (copied here in case it goes away) was:

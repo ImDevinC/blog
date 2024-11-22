@@ -11,6 +11,7 @@ showFullContent = false
 readingTime = true
 hideComments = false
 color = "" #color from the theme settings
+type = "post"
 +++
 # Introduction
 Awhile ago I setup my homelab running on a kubernetes server sitting in my office. You can read about it in my other blog post here: [Migrating my homelab](https://blog.imdevinc.com/posts/homelab). One thing that security focused people will probably immediately notice, is that I have public facing services but no mention of a firewall or security product. Luckily, I have yet to have anything negative happen, but that doesn't mean people haven't tried. If I occasionally look at my access logs, I can see quite a few random IP's hitting my endpoints looking for something.
