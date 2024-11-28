@@ -25,7 +25,7 @@ There's a few options available to tackle smart lighting, but I have a specific 
 - All of my existing lights are LED, but non-smart.
 
 Taking this into account, and wanting to be as cost effective + future proof as possible, here's what I decided to do:
-1. Install a z-wave hub (TODO: Z-WAVE HUB) to my HomeAssistant
+1. Install the [Aeotec Z-Stick Gen5+](https://aeotec.com/products/aeotec-z-stick-gen5/) Z-Wave Hub to my HomeAssistant
     - I chose z-wave because it's widely supported by many devices and should be extensible. It also runs it's own mesh network so my entire house should be covered quite well.
 1. Replace all light switches with [Inovelli LZW-30 Smart Switches](https://help.inovelli.com/en/articles/8453781-red-series-on-off-switch-manual)
 1. Add a [Bond Bridge](https://bondhome.io/product/bond-bridge/) to relay RF communications from HomeAssistant to the different fans
@@ -33,8 +33,135 @@ Taking this into account, and wanting to be as cost effective + future proof as 
 I installed everything, making sure the switches all work as expected when paired with the existing remote. I then added each fan in the house to my Bond Bridge and added the [Bond integration](https://www.home-assistant.io/integrations/bond/) to HomeAssistant. This allowed me to control my devices directly through HomeAssistant, with separate controls for the fan and light.
 I then added a custom blueprint for my z-wave switches that looks like this:
 ```yaml
-> TODO: BLUEPRINT
+blueprint:
+  name: Light Switch Control
+  description: Allows for multiple types of light/fan controls
+  domain: automation
+  input:
+    switch:
+      name: Switch
+      description: The light switch
+      selector:
+        entity:
+          domain: switch
+    switch_node:
+      name: Switch Node
+      description: The node id of the switch
+      selector:
+        number:
+          min: 1
+          max: 255
+    light:
+      name: Light
+      description: The light to control
+      selector:
+        entity:
+          domain: light
+    fan:
+      name: Fan
+      description: The fan to control
+      selector:
+        entity:
+          domain: fan
 
+mode: single
+
+trigger:
+  - id: turn_on
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      label: Scene 002
+      value: KeyPressed
+      node_id: !input switch_node
+  - id: turn_off
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      label: Scene 001
+      value: KeyPressed
+      node_id: !input switch_node
+  - id: double_tap_up
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      label: Scene 002
+      value: KeyPressed2x
+      node_id: !input switch_node
+  - id: double_tap_down
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      label: Scene 001
+      value: KeyPressed2x
+      node_id: !input switch_node
+  - id: hold_down
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      label: Scene 001
+      value: KeyHeldDown
+      node_id: !input switch_node
+
+action:
+  - choose:
+    - conditions:
+      - condition: and
+        conditions:
+        - condition: trigger
+          id: turn_on
+        - condition: state
+          entity_id: !input light
+          state: 'off'
+      sequence:
+        - alias: Wait for 1 sec so light is on
+          delay: '00:00:01'
+        - alias: Turn on light
+          service: light.turn_on
+          target:
+            entity_id: !input 'light'
+    - conditions:
+      - condition: trigger
+        id: double_tap_up
+      sequence:
+        - alias: Increase fan speed
+          service: fan.increase_speed
+          target:
+            entity_id: !input 'fan'
+    - conditions:
+      - condition: trigger
+        id: double_tap_down
+      sequence:
+        - alias: Decrease fan speed
+          service: fan.decrease_speed
+          target:
+            entity_id: !input 'fan'
+    - conditions:
+      - condition: trigger
+        id: hold_down
+      sequence:
+        - alias: Set fan to 0
+          service: fan.set_percentage
+          target:
+            entity_id: !input 'fan'
+          data:
+            percentage: 0
+    - conditions:
+      - condition: trigger
+        id: turn_on
+      sequence:
+        - alias: Turn on light
+          service: light.turn_on
+          target:
+            entity_id: !input 'light'
+    - conditions:
+      - condition: trigger
+        id: turn_off
+      sequence:
+        - alias: Turn off light
+          service: light.turn_off
+          target:
+            entity_id: !input 'light'
 ```
 This blueprint allows all of my switches to work in the following fashion:
 1. Pressing the light switch up or down, as normal, will turn the light on or off
