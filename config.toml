@@ -1,4 +1,4 @@
-baseURL = "https://blog.imdevinc.com/"
+baseURL = "https://imdevinc.com/"
 defaultContentLanguage = "en-us"
 languageCode = "en-us"
 enableRobotsTXT = true
