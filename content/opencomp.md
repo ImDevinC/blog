@@ -11,7 +11,7 @@ I’m a huge supporter of sharing compensation values amongst peers (or people w
 > This idea is not mine. [Wes Kennedy](https://wes.today/) shared this on [Twitter](https://twitter.com/wesdottoday) and it incentivized me to share as well. If you’re a fan, I’d encourage you to create a /opencomp on your own site.
 
 ## Current
-- Senior Site Reliability Engineer [September 2024 - Present] - $196k Base, 10% Bonus, $20k worth of shares
+- Senior Site Reliability Engineer [September 2024 - Present] - $201 Base, 10% base Bonus, $20k worth of shares
 
 ## Previous
 - Senior Site Reliability Engineer [March 2023 - August 2024] - $190k Base, 10% Bonus, 10k Shares of Stock Options
