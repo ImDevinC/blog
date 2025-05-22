@@ -2,7 +2,7 @@
 title: OpenComp
 type: post
 pubdate: 2023-03-28
-modified: 2024-10-24T00:00Z
+modified: 2025-05-22:00Z
 author: ImDevinC
 tags: [opencomp]
 ---
@@ -11,9 +11,10 @@ I’m a huge supporter of sharing compensation values amongst peers (or people w
 > This idea is not mine. [Wes Kennedy](https://wes.today/) shared this on [Twitter](https://twitter.com/wesdottoday) and it incentivized me to share as well. If you’re a fan, I’d encourage you to create a /opencomp on your own site.
 
 ## Current
-- Senior Site Reliability Engineer [September 2024 - Present] - $201 Base, 10% base Bonus, $20k worth of shares
+- Staff Site Reliability Engineer [May 2025 - Present] - $210k Base, 0% Bonus, 5k Options
 
 ## Previous
+- Senior Site Reliability Engineer [September 2024 - May 2025] - $201k Base, 10% base Bonus, $20k worth of shares
 - Senior Site Reliability Engineer [March 2023 - August 2024] - $190k Base, 10% Bonus, 10k Shares of Stock Options
 - Senior Site Reliability Engineer [August 2022 - March 2023] - $170k Base, 10% Bonus, 10k Shares of Stock Options
 - Lead Software Engineer [October 2021 - June 2022] - $235k Base, 20% Bonus, $120k RSU
