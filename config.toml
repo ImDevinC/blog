@@ -23,7 +23,7 @@ theme = "gokarna-hugo"
   avatarURL = "https://gravatar.com/avatar/ca7cd135c4d4c60645ec0033ee1562a6?size=256"
   avatarAltText = "ImDevinC"
   showBackToTopButton = true
-  customHeadHTML = '<link rel="stylesheet" type="text/css" href="style.css">'
+  customHeadHTML = '<link rel="stylesheet" type="text/css" href="style.css">\n<script defer src="https://umami.imdevinc.com/script.js" data-website-id="4ddcf34b-dfb6-4819-9361-5b86a675af3c"></script>'
   socialIcons = [
     {name = "bluesky", url = "https://bsky.app/profile/imdevinc.com"},
     {name = "github", url = "https://github.com/imdevinc"},
