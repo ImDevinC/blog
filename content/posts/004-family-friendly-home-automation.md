@@ -1,4 +1,4 @@
----
++++
 title = "Making my home automation setup family friendly"
 date = "2024-11-28T00:00:00Z"
 author = "ImDevinC"
@@ -12,7 +12,7 @@ readingTime = true
 hideComments = false
 color = ""
 type = "post"
----
++++
 # Home automation is great... for tech people
 Like a lot of people recently, I've been diving into different pieces of home automation for my house. I see lots of really cool YouTube videos from people who post their very elaborate setups with tons of really cool features and that do insane things. I would like to get to that point eventually, where walking between rooms toggles lights, my blinds adjust based on my activities throughout the day, and who knows what else. One major piece that I feel is missing from these setups is making sure that the automations are friendly not only for the family living in the house (a lot of people do think about this), but also for when people come to visit our watch the house and we aren't home. That's what I need to solve for.
 

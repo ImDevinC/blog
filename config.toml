@@ -30,3 +30,4 @@ theme = "gokarna-hugo"
     {name = "linkedin", url = "https://linkedin.com/in/imdevinc"},
   ]
   showPostsOnHomePage = "recent"
+  date_format = "6 January 2006"
