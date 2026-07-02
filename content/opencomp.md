@@ -2,7 +2,7 @@
 title: OpenComp
 type: post
 pubdate: 2023-03-28
-modified: 2025-05-22:00Z
+modified: 2026-07-01
 author: ImDevinC
 tags: [opencomp]
 ---
